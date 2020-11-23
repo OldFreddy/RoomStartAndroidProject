@@ -6,13 +6,15 @@ import androidx.room.Room
 
 class App : Application() {
 
-    companion object{
+    companion object {
         var database: AppDatabase? = null
     }
 
     override fun onCreate() {
         super.onCreate()
-        App.database = Room.databaseBuilder(this,AppDatabase::class.java, "database").build()
+        database = Room.databaseBuilder(this, AppDatabase::class.java, "database")
+//            .allowMainThreadQueries()
+            .build()
 
     }
 }
