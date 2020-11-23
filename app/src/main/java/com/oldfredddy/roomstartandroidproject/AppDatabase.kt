@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase
 //    abstract fun employeeDao():EmployeeDao
 //}
 
-@Database(entities = [Employee::class], version = 1)
+@Database(entities = [Employee::class], version = 2)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun employeeDao(): EmployeeDao
 }
